@@ -1,6 +1,5 @@
 
 # Hi this is my personal website made with Astro
-**Server:** Node, Express
 
 In this project i will build my personal website using astro as a js framework. Pick some great tools like tailwind, using static type like typescript, and some ui framework probably.
 
