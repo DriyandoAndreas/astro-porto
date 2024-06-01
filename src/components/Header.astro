@@ -1,0 +1,74 @@
+---
+
+---
+
+<nav class="bg-gray-800 p-4 lg:flex">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-white text-xl">Hi There</div>
+    <div class="block lg:hidden">
+      <button
+        id="toggleButton"
+        class="toggle-button flex flex-col justify-around h-6 w-6 focus:outline-none"
+      >
+        <span
+          class="bar block w-6 h-0.5 bg-white transition-transform duration-300"
+        ></span>
+        <span
+          class="bar block w-6 h-0.5 bg-white transition-opacity duration-300"
+        ></span>
+        <span
+          class="bar block w-6 h-0.5 bg-white transition-transform duration-300"
+        ></span>
+      </button>
+    </div>
+  </div>
+  <div
+    id="navbarLinks"
+    class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:w-auto"
+  >
+    <ul class="lg:flex lg:justify-end lg:flex-1">
+      <li class="mt-4 lg:mt-0 lg:ml-6">
+        <a href="#" class="block text-white lg:inline-block">Home</a>
+      </li>
+      <li class="mt-4 lg:mt-0 lg:ml-6">
+        <a href="#" class="block text-white lg:inline-block">About</a>
+      </li>
+      <li class="mt-4 lg:mt-0 lg:ml-6">
+        <a href="#" class="block text-white lg:inline-block">Project</a>
+      </li>
+      <li class="mt-4 lg:mt-0 lg:ml-6">
+        <a href="#" class="block text-white lg:inline-block">Blogs</a>
+      </li>
+      <li class="mt-4 lg:mt-0 lg:ml-6">
+        <a href="#" class="block text-white lg:inline-block">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .toggle-button.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle-button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .toggle-button.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleButton");
+    const navbarLinks = document.getElementById("navbarLinks");
+
+    if (toggleButton && navbarLinks) {
+      toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle("hidden");
+        navbarLinks.classList.toggle("flex");
+        toggleButton.classList.toggle("active");
+      });
+    }
+  });
+</script>
